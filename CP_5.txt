@@ -1,0 +1,29 @@
+#python CP_5.txt
+
+print('Укажите длину ребра куба')
+A=input()
+print('Укажите длину ребра цилиндра')
+H=input()
+print('Укажите длину радиуса цилиндра')
+R=input()
+print('Укажите заданный объем')
+V=input()
+
+A=int(A)
+H=int(H)
+R=int(R)
+V=int(V)
+
+if (A>=0) and (H>=0) and (R>=0) and (V>=0):
+	
+	Vk=A*A*A
+	Vz=3.14*R*R*H
+
+if V<=Vk and V<=Vz: print('Жидкость поместится в обе ёмкости')
+else: 
+	if V<=Vk and V>Vz: print('Жидкость поместится только в куб')
+	else: 
+		if V>Vk and V<=Vz: print('Жидкость поместится только в цилиндр')
+		else: 
+			if V>Vk and V>Vz: print('Жидкость не поместится ни в одну из ёмкостей')
+	 				
